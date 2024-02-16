@@ -112,6 +112,11 @@ export function CreateUserForm() {
                 )}
               />
               <DialogFooter>
+                {createUser.isError && (
+                  <FormMessage title="Ocorreu um erro">
+                    {createUser.error.message}
+                  </FormMessage>
+                )}
                 <Button disabled={createUser.isLoading} type="submit">
                   {createUser.isLoading ? "Salvando..." : "Salvar"}
                 </Button>

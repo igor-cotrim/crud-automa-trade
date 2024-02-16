@@ -72,7 +72,7 @@ export function UpdateUserForm({ user }: Props) {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Atualizar Usuário</DialogTitle>
-          <DialogDescription>Criar um novo usuário.</DialogDescription>
+          <DialogDescription>Atualizar o usuário.</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <Form {...form}>
@@ -123,6 +123,11 @@ export function UpdateUserForm({ user }: Props) {
                 )}
               />
               <DialogFooter>
+                {updateUser.isError && (
+                  <FormMessage title="Ocorreu um erro">
+                    {updateUser.error.message}
+                  </FormMessage>
+                )}
                 <Button disabled={updateUser.isLoading} type="submit">
                   {updateUser.isLoading ? "Atualizando..." : "Atualizar"}
                 </Button>
