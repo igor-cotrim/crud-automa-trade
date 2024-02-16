@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  postgres:
+    container_name: crud-automa-trade
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${PGPASSWORD}
+      POSTGRES_DB: crud-automa-trade
+      PGDATA: /data/postgres
+    volumes:
+      - ./data/pg:/data/postgres
