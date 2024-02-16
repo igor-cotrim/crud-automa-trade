@@ -5,9 +5,9 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
+import type { User } from "@prisma/client";
 
 import { api } from "@/trpc/react";
-import type { User } from "@/types";
 import {
   Dialog,
   DialogContent,
