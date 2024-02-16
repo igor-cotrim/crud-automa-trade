@@ -1,10 +1,12 @@
 // Providers
 export * from "./providers/theme-provider";
 
-// Components
-export * from "./shared/ThemeToggle";
-export * from "./shared/Header";
+// Forms
+export * from "./forms/CreateUserForm";
+export * from "./forms/UpdateUserForm";
 
-// UI
-export * from "./ui/button";
-export * from "./ui/dropdown-menu";
+// Shared
+export * from "./shared/DeleteUserDialog";
+export * from "./shared/Header";
+export * from "./shared/Table";
+export * from "./shared/ThemeToggle";
