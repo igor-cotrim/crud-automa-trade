@@ -10,7 +10,7 @@ export const env = createEnv({
     DATABASE_URL: z
       .string()
       .refine(
-        (str) => !str.includes("YOUR_MYSQL_URL_HERE"),
+        (str) => !str.includes("YOUR_DATABASE_URL_HERE"),
         "You forgot to change the default URL",
       ),
     NODE_ENV: z
@@ -19,9 +19,10 @@ export const env = createEnv({
     DATABASE_PASSWORD: z
       .string()
       .refine(
-        (str) => !str.includes("YOUR_MYSQL_URL_HERE"),
+        (str) => !str.includes("YOUR_DATABASE_PASSWORD_HERE"),
         "You forgot to put the database password in the env file",
-      ),
+      )
+      .default("admin"),
   },
 
   /**
