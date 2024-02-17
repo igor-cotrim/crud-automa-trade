@@ -7,6 +7,8 @@ This is an extended version of the [T3 Stack](https://create.t3.gg/) project boo
 - Docker Compose setup for local database
 - [`@next/font`] for optimized fonts
 
+[Try it out now!](https://crud-automa-trade-qe77-2dn0szhvo-igor-cotrim.vercel.app/)
+
 ## Getting Started
 
 1. Install deps
